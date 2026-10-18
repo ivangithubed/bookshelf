@@ -1,0 +1,64 @@
+{
+  "run_id": "run-20261018-bookshelf-sdd-01",
+  "created_at": "2026-10-18T19:58:00+03:00",
+  "project_name": "bookshelf",
+  "target_directory": "c:/Users/learn/Documents/antigravity/keen-bell",
+  "preflight": {
+    "initial_directory_state": "empty_except_git",
+    "baseline_git_branch": "master",
+    "baseline_git_commit": "b9b7fda5c1fa923a177ebed901fa011b521509de",
+    "baseline_working_tree_clean": true,
+    "baseline_existing_tests": "not_applicable",
+    "protected_paths": [
+      "C:/Users/learn/.gemini/config/skills",
+      "C:/Users/learn/.gemini/antigravity"
+    ],
+    "recovery_command": "git reset --hard b9b7fda5c1fa923a177ebed901fa011b521509de && git clean -fd"
+  },
+  "toolchain": {
+    "os": {
+      "value": "windows",
+      "source": "runtime-observed"
+    },
+    "shell": {
+      "value": "pwsh",
+      "source": "runtime-observed"
+    },
+    "node": {
+      "value": "v24.21.0",
+      "source": "runtime-observed"
+    },
+    "npm": {
+      "value": "11.19.0",
+      "source": "runtime-observed"
+    },
+    "git": {
+      "value": "2.45.2.windows.1",
+      "source": "runtime-observed"
+    }
+  },
+  "agent_telemetry": {
+    "root_orchestrator_model": {
+      "value": "Gemini 4 Argon (High)",
+      "tier": "pro",
+      "source": "orchestrator-reported"
+    },
+    "worker_model_routing": {
+      "wave_0": "pro",
+      "wave_1": "flash",
+      "wave_2": "flash",
+      "wave_3_red_team": "pro"
+    },
+    "token_cost_telemetry": "unreported_by_runtime"
+  },
+  "approval_ledger": {
+    "block_1_product_and_scope": "approved",
+    "block_2_ux_ui_and_data": "approved",
+    "block_3_architecture_and_quality": "approved",
+    "block_4_execution_and_release": "approved",
+    "implementation_authorized": true,
+    "commits_authorized": false,
+    "remote_push_authorized": false,
+    "production_deploy_authorized": false
+  }
+}

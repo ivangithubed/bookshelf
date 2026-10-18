@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Antigravity DAG Execution Spec — Bookshelf",
+  "project_name": "bookshelf",
+  "waves": [
+    {
+      "wave_index": 0,
+      "sync_point_gate": "npm run typecheck",
+      "tasks": [
+        {
+          "task_id": "wave-0-foundation",
+          "role": "Root Orchestrator — Shared Contracts, IndexedDB & 45-Book Seed Engine",
+          "model": "pro",
+          "workspace": "inherit",
+          "allowed_write_patterns": [
+            "package.json",
+            "tsconfig.json",
+            "next.config.ts",
+            "postcss.config.mjs",
+            "eslint.config.mjs",
+            "vitest.config.ts",
+            "playwright.config.ts",
+            "AGENTS.md",
+            ".gitignore",
+            ".env.example",
+            ".github/workflows/**",
+            ".agentic/**",
+            "docs/adr/**",
+            "public/**",
+            "src/data/**",
+            "src/styles/**",
+            "src/types/**",
+            "src/lib/db/**",
+            "src/lib/seed/**"
+          ]
+        }
+      ]
+    },
+    {
+      "wave_index": 1,
+      "sync_point_gate": "npm run typecheck && npm run test",
+      "tasks": [
+        {
+          "task_id": "wave-1a-domain-services",
+          "role": "Domain & Data Services Worker (CSV Migration Pro #4, Stats Engine #5, Open Library Proxy)",
+          "model": "flash",
+          "workspace": "branch",
+          "allowed_write_patterns": [
+            "src/lib/csv/**",
+            "src/lib/stats/**",
+            "src/lib/open-library/**",
+            "src/app/api/books/**",
+            "tests/unit/**"
+          ]
+        },
+        {
+          "task_id": "wave-1b-shell-a11y-landing",
+          "role": "App Shell, A11y-First Engine (#6) & Landing Worker",
+          "model": "flash",
+          "workspace": "branch",
+          "allowed_write_patterns": [
+            "src/context/**",
+            "src/components/layout/**",
+            "src/components/a11y/**",
+            "src/app/layout.tsx",
+            "src/app/page.tsx",
+            "src/app/guest/**",
+            "src/app/accessibility/**"
+          ]
+        }
+      ]
+    },
+    {
+      "wave_index": 2,
+      "sync_point_gate": "npm run verify && npm run test:e2e",
+      "tasks": [
+        {
+          "task_id": "wave-2a-library-shelves-books",
+          "role": "Library, Shelves, Bulk Actions & Book Experience Worker",
+          "model": "flash",
+          "workspace": "branch",
+          "allowed_write_patterns": [
+            "src/components/books/**",
+            "src/components/shelves/**",
+            "src/app/library/**",
+            "src/app/shelves/**",
+            "src/app/books/**"
+          ]
+        },
+        {
+          "task_id": "wave-2b-discovery-import-analytics",
+          "role": "Discovery Hub, CSV Studio, Timeline, Year-in-Review & Analytics Worker",
+          "model": "flash",
+          "workspace": "branch",
+          "allowed_write_patterns": [
+            "src/components/discover/**",
+            "src/components/import/**",
+            "src/components/stats/**",
+            "src/app/discover/**",
+            "src/app/import/**",
+            "src/app/timeline/**",
+            "src/app/year-in-review/**",
+            "src/app/analytics/**",
+            "tests/e2e/**",
+            "README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "wave_index": 3,
+      "sync_point_gate": "npm run verify && npm run test:e2e",
+      "tasks": [
+        {
+          "task_id": "wave-3-red-team-audit",
+          "role": "Red-Team Adversarial Reviewer & Tech Debt Auditor (ISO 25010:2023)",
+          "model": "pro",
+          "workspace": "inherit",
+          "allowed_write_patterns": [
+            ".agentic/evidence/red-team-report.md"
+          ]
+        }
+      ]
+    }
+  ]
+}

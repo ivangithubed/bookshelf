@@ -1,0 +1,16 @@
+{
+  "name": "Bookshelf — Personal Reading Tracker",
+  "short_name": "Bookshelf",
+  "description": "Your reading life, beautifully organized.",
+  "start_url": "/library",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#A8612B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
